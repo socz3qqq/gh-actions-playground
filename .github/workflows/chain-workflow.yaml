@@ -7,6 +7,9 @@ on:
     workflows: [Test]
     types:
       - completed
+    branches:
+      - main
+      - test/rel_*
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,5 +17,5 @@ jobs:
     steps:
       - name: 
         run: |
-          echo "hello from the other workflow"
+          echo "hello from the other test workflow"
 
